@@ -1,7 +1,0 @@
-{
-    "window.zoomLevel": 0,
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorBlinking": "phase",
-    "workbench.colorTheme": "Monokai Dark Soda",
-    "files.hotExit": "onExitAndWindowClose"
-}
