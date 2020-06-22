@@ -1,0 +1,6 @@
+configuration {
+    modi: "run,window";
+	font: "Noto Sans 10";
+	show-icons: true;
+	theme: "sidetab.rasi";
+	max-history-size: 25;}

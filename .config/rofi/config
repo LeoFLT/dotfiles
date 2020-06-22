@@ -1,0 +1,9 @@
+configuration {
+ modi: "window,run";
+ theme: "/home/leoflt/.local/share/rofi/themes/sidetab.rasi";
+ font: "hack 10";
+ combi-modi: "window,run";
+ show-icons: true;
+ terminal: "st";
+ }
+

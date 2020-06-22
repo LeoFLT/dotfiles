@@ -1,0 +1,230 @@
+# modifier keys
+set $mod Mod4
+set $alt Mod1
+
+# font 
+font pango:Noto Sans 10
+
+#################################################################################################################################
+############################################################# Bindings ##########################################################
+#################################################################################################################################
+
+# use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+t exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+q kill
+bindsym $alt+F4 kill
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $alt+Tab exec rofi -show window -modi window
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# make mod+tab cycle through workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# media controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# rofi
+bindsym $mod+Return exec rofi -show run
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys                                                         ```                             
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+#################################################################################################################################
+############################################################ Theming ############################################################
+#################################################################################################################################
+
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#bar {
+# 	colors {
+#		background $bg-color
+#	    	separator #757575
+#		#                  border             background         text
+#		focused_workspace  $bg-color          $bg-color          $text-color
+#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	}
+#}
+
+bindsym $mod+r mode "resize"
+
+# gaps
+for_window [class=".*"] border pixel 0 
+gaps inner 7
+gaps outer 0
+smart_borders on
+smart_borders no_gaps
+border_radius 2
+
+#################################################################################################################################
+######################################################### Miscellaneous #########################################################
+#################################################################################################################################
+
+Focus_follows_mouse off
+new_window pixel 0 
+
+# wallpaper
+exec_always --no-startup-id feh --bg-scale /home/leoflt/.config/i3/wallpaper.jpg
+
+# assign workspace
+set $ws1 "1:  Browser"
+set $ws2 "2:  Discord"
+set $ws3 "3: qBittorrent"
+set $ws4 "4:  Spotify"
+set $ws5 "5:  Thunderbird"
+set $ws6 "6:  Editor"
+set $ws7 "7: Games"
+set $ws8 "8: Main Monitor"
+set $ws9 "9: Second Monitor"
+set $ws10 "10: Third Monitor"
+
+# bind workspaces to outputs
+workspace $ws1 output DVI-I-0
+workspace $ws2 output DP-1
+workspace $ws3 output HDMI-0
+workspace $ws4 output DP-1
+workspace $ws5 output DP-1
+workspace $ws7 output DVI-I-0
+workspace $ws8 output DVI-I-0
+workspace $ws9 output DP-1
+workspace $ws10 output HDMI-0
+
+# constrain specific applications to workspaces
+assign [class="Chromium"] $ws1
+assign [class="discord"] $ws2
+assign [class="qBittorrent"] $ws3
+assign [class="Spotify"] $ws4
+assign [class="Thunderbird"] $ws5
+assign [class="code-oss"] $ws6
+assign [class="Wine"] $ws7
+
+# startup applications
+exec_always --no-startup-id /home/leoflt/.config/polybar/launch.sh
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+exec --no-startup-id dunst
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id compton -f -i 0.9
+exec --no-startup-id qbittorrent
+exec --no-startup-id discord
+exec --no-startup-id spotify
+exec --no-startup-id thunderbird

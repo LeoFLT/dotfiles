@@ -1,0 +1,142 @@
+Looking for git in: git
+Using git 2.27.0 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto
+> git status -z -u
+> git show :README.md
+> git ls-files --stage -- /home/leoflt/.zprezto/README.md
+> git cat-file -s 552784bae76582757bc5c1f6bb9a113698d2b1b2
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/leoflt/.zprezto/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/leoflt/.zprezto/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:165:26)
+	at Object.watch (fs.js:1270:11)
+	at Object.t.watch (/usr/lib/code/extensions/git/dist/main.js:1:606659)
+	at T.updateTransientWatchers (/usr/lib/code/extensions/git/dist/main.js:1:84393)
+	at e.fire (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:262)
+	at e.updateModelState (/usr/lib/code/extensions/git/dist/main.js:1:103799)
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/autosuggestions/external
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/history-substring-search/external
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/syntax-highlighting/external
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/completion/external
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/prompt/external/powerline
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/prompt/external/agnoster
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/prompt/external/pure
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/fasd/external
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/prompt/external/async
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/prompt/external/powerlevel9k
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/leoflt/.zprezto/modules/prompt/external/powerlevel9k/shunit2
+> git status -z -u
+> git symbolic-ref --short HEAD
+fatal: ref HEAD is not a symbolic ref
+> git rev-parse HEAD
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :README.md
+> git ls-files --stage -- /home/leoflt/.zprezto/README.md
+> git cat-file -s 552784bae76582757bc5c1f6bb9a113698d2b1b2
