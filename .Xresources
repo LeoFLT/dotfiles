@@ -42,12 +42,14 @@
 *.colorBD:     #c4c5b5
 !*.colorIT:
 !*.colorUL:
-
+ 
+URxvt.cursorBlink: false
+URxvt.cursorUnderline: false 
 Xcursor.size: 16W
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
-URxvt.font: xft:MesloLGS NF:size=11
+URxvt.font: xft:MesloLGS NF:size=12
 URxvt.depth: 24
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
-URxvt.perl-ext-common: default,matcher,vtwheel
+URxvt.perl-ext-common: default,matcher,keyboard-select

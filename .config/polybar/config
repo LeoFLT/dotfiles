@@ -337,11 +337,11 @@ menu-1-0-exec = i3-msg exit || openbox --exit
 type = custom/script
 format-margin = 4
 format =  <label>
-exec = playerctl metadata --format '{{artist}} - {{title}}'
+exec = playerctl -p spotify metadata -f '{{artist}} - {{title}}'
 label =  %output:0:50:...%
 tail = true
 interval = 1
-click-left = "playerctl play-pause"
+click-left = "playerctl -p spotify play-pause"
 
 [settings]
 screenchange-reload = true

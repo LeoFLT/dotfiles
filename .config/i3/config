@@ -174,7 +174,7 @@ gaps inner 7
 gaps outer 0
 smart_borders on
 smart_borders no_gaps
-border_radius 2
+border_radius 3
 
 #################################################################################################################################
 ######################################################### Miscellaneous #########################################################
@@ -220,7 +220,6 @@ assign [class="Wine"] $ws7
 
 # startup applications
 exec_always --no-startup-id /home/leoflt/.config/polybar/launch.sh
-exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id dunst
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id compton -f -i 0.9

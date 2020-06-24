@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'history' \
   'directory' \
+  'git' \
   'spectrum' \
   'utility' \
   'pacman' \
@@ -176,7 +177,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'brackets' \
   'pattern' \
   'line' \
-  'cursor' \
   'root'
 
 # Set syntax highlighting styles.
