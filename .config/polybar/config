@@ -335,13 +335,15 @@ menu-1-0-exec = i3-msg exit || openbox --exit
 
 [module/spotify]
 type = custom/script
-format-margin = 4
+format-margin = 0
+format-padding = 4
 format = <label>
 exec = /home/leoflt/.config/polybar/spotify.sh
 label =  %output:0:50:...%
 tail = true
 interval = 0.5
 click-left = "playerctl -p spotify play-pause"
+
 
 [settings]
 screenchange-reload = true
