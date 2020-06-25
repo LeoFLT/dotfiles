@@ -184,7 +184,7 @@ Focus_follows_mouse off
 new_window pixel 0 
 
 # wallpaper
-exec_always --no-startup-id feh --bg-scale /home/leoflt/.config/i3/wallpaper.jpg
+exec /home/leoflt/.config/i3/wallpaper.sh
 
 # assign workspace
 set $ws1 "1:  Browser"

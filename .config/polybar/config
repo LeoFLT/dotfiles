@@ -340,7 +340,7 @@ format = <label>
 exec = /home/leoflt/.config/polybar/spotify.sh
 label =  %output:0:50:...%
 tail = true
-interval = 1
+interval = 0.5
 click-left = "playerctl -p spotify play-pause"
 
 [settings]
