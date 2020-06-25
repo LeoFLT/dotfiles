@@ -336,8 +336,8 @@ menu-1-0-exec = i3-msg exit || openbox --exit
 [module/spotify]
 type = custom/script
 format-margin = 4
-format =  <label>
-exec = playerctl -p spotify metadata -f '{{artist}} - {{title}}'
+format = <label>
+exec = /home/leoflt/.config/polybar/spotify.sh
 label =  %output:0:50:...%
 tail = true
 interval = 1
