@@ -184,8 +184,8 @@ Focus_follows_mouse off
 new_window pixel 0 
 
 # wallpaper
-exec /home/leoflt/.config/i3/wallpaper.sh
-
+#exec /home/leoflt/.config/i3/wallpaper.sh
+exec_always --no-startup-id feh --bg-center /home/leoflt/.config/i3/wallpaper.png
 # assign workspace
 set $ws1 "1:  Browser"
 set $ws2 "2:  Discord"
@@ -214,7 +214,7 @@ assign [class="Chromium"] $ws1
 assign [class="discord"] $ws2
 assign [class="qBittorrent"] $ws3
 assign [class="Spotify"] $ws4
-assign [class="birdtray"] $ws5
+assign [class="Thunderbird"] $ws5
 assign [class="code-oss"] $ws6
 assign [class="Wine"] $ws7
 
@@ -224,7 +224,8 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id dunst
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id compton -f -i 0.9
+exec --no-startup-id /home/leoflt/Scripts/wacom.sh
 exec --no-startup-id qbittorrent
 exec --no-startup-id discord
 exec --no-startup-id spotify
-exec --no-startup-id thunderbird
+exec --no-startup-id birdtray 
